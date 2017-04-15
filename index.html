@@ -11,187 +11,100 @@
 		<!-- <link rel="stylesheet" href="http://thedesignoffice.org/wp-content/themes/dev/v3_style.css" type="text/css" /> -->
     <style>
 		img { width: 100%; height: auto; }
-		.parent {
+		body { margin: 0; box-sizing: border-box; }
+		section {
 			counter-reset: my--counter;
 			display: grid;
-			grid-gap: 2rem;
-			grid-template-columns: repeat(auto-fill, minmax(450px, 1fr) );
-			grid-template-rows: repeat( 2, auto);
-			align-content: space-around;
-			justify-items: center;
 			padding: 0;
-			margin: 0;
+			margin: 50px 0;
+			background: rgba(255,255,0,.4);
+			min-height: 200px;
 		}
-
-		.parent .child:nth-child(n):before { content: counter(my--counter); }
-			.child {
+		section>div:nth-child(n):before { content: counter(my--counter); }
+		section>div {
 				counter-increment: my--counter;
-				margin:22px;
-				min-height: 44px;
-				background: yellow;
+				min-height: 50px;
+				background: rgba(0,0,255,.4);
+				margin: 1px;
 			}
 
-				/* Screen small ----------- */
-				@media only screen and (max-width : 758px) {
+/* Specifics start here */
+		section:nth-child(1)  {
+		  grid-template-columns: 1fr 1fr;
+		  grid-template-rows: 1fr 1fr;
+		}
+		section:nth-child(1) div:nth-child(1)  {
+		  grid-column: 2; grid-row: 1;
+		}
 
-				}
+
+		 section:nth-child(2) {
+			 grid-template-areas: "one two three"
+	                          "four four five"
+	                          "six seven seven";
+	     grid-template-columns: 1fr 1fr 1fr;
+	     grid-template-rows: 1fr 150px 1fr;
+		 }
+		 section:nth-child(2) div:nth-child(1) { grid-area: four;  }
+		 section:nth-child(2) div:nth-child(2) { grid-area: three; justify-self: end;  width: 50%;  }
+		 section:nth-child(2) div:nth-child(3) { grid-column: 2 / 3; grid-row: 1 / 4 }
+
+
+		 section:nth-child(3)  {
+ 		  grid-template-columns: 1fr 1fr;
+ 		  grid-template-rows: 1fr 1fr;
+ 		}
+ 		section:nth-child(3) div:nth-child(1)  {
+ 		  grid-column: 2; grid-row: 1;
+ 		}
+
+		section:nth-child(4)  {
+			grid-template-columns: repeat(auto-fill, minmax(25ch, 1fr));
+	 }
+
+
+
+
     </style>
     </head>
     <body>
 
-					<div class="parent">
-							<div class="child">
-									 Straight . Awkward situation where orphaned children get super wide.
-							</div>
-					</div>
-
-            <div class="parent">
-                <div class="child">
-                     Child
-                </div>
-                <div class="child">
-                    Child
-                </div>
-            </div>
-
-						<div class="parent">
-                <div class="child">
-                    Child
-                </div>
-                <div class="child">
-                    Child
-                </div>
-								<div class="child">
-                    Child
-                </div>
-            </div>
+					<section>
+						<div></div>
+					</section>
 
 
-          <div class="parent ">
-            		<div class="child"> Child</div>
-
-								<div class="child blank "> child </div>
-
-							  <div class="child  double ">
-							      child   double
-							  </div>
+					<section>
+					  <div></div>
+						<div></div>
+						<div></div>
+					</section>
 
 
-							  <div class="child  ">
-										child
-							  </div>
+					<section>
+						<div></div>
+						<div></div>
+						<div></div>
+					</section>
 
 
-
-								<div class="child blank"> child</div>
-
-								<div class="child   ">
-								    child
-							  </div>
-
-
-
-							  <div class="child  shrink">
-									child shrink
-							  </div>
-
-								<div class="child  grow  ">
-										child  grow
-							  </div>
-
-
-
-								<div class="child   ">
-									<div>
-									child
-							    <a href="https://instagram.com/explore/tags/204westminster/" class="noarrow excess"><img src="http://thedesignoffice.org/wp-content/themes/dev/lib/img/we.svg" width="120"></a>
-									</div>
-							  </div>
-
-
-								<div class=" child   double ">
-									child   double
-								</div>
-
-								<div class=" child   ">
-									child
-                </div>
-
-								<div class="child    double ">
-							    <div>
-										child  double
-							   <img src="http://srainwater.com/wp-content/uploads/2014/04/sniffle.jpg">
-							 		</div>
-							  </div>
-							</div><!-- parent -->
-
-
-							<div class="parent">
-	                <div class="child">
-	                    Child
-	                </div>
-	                <div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child triple">
-	                    Child triple
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-									<div class="child">
-	                    Child
-	                </div>
-
-            </div><!-- parent -->
+					<section>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</section>
 
 
     </body>
