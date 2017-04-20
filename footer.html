@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	  <title>The Design Office: Grid Experiments</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="title" content="The Design Office">
+	  <meta name="description" content="Grid framework that we're playign with">
+		<meta name="author" content="Developed by John Caserta">
+	  <meta name="Copyright" content=" The Design Office 2017. ">
+
+    <style>
+		img { width: 100%;  }
+		html {   height: 100%; }
+		body { margin: 0;
+			display: grid;
+			box-sizing: border-box; min-height: 100%; background: yellow;
+			grid-template-rows: 4rem 1fr 4rem;
+			grid-template-columns: 1fr; }
+		body * { background: yellow; }
+		nav, footer { background: yellow; }
+		footer { grid-column: 1 / 2; grid-row: 3 / 4; }
+    </style>
+    </head>
+    <body>
+
+					<nav>
+						Nav
+					</nav>
+
+
+					<main class="middle">
+						<div><img src="wall.png"><img src="wall.png"><img src="wall.png"></div>
+					</main>
+
+
+					<footer>
+						Footer
+					</footer>
+    </body>
+</html>
