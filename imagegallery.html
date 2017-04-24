@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	  <title>The Design Office: Image Gallery</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="title" content="The Design Office">
+	  <meta name="description" content="Grid framework that we're playign with">
+		<meta name="author" content="Developed by John Caserta">
+	  <meta name="Copyright" content=" The Design Office 2017. ">
+
+    <style>
+		body { margin: 0; box-sizing: border-box; }
+		section {
+			display: grid;
+			padding: 0;
+			margin: 50px auto;
+			background: rgba(255,255,0,.4);
+			min-height: 200px;
+			width: 70vw;
+		}
+
+
+
+
+
+		section  {
+			grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+			grid-column-gap: 10px;
+			align-content: space-around;
+			justify-content: space-between;
+	 	}
+		img {
+		justify-self: center; align-self: center; text-align: center; width: 220px;
+	 }
+
+
+
+
+    </style>
+    </head>
+    <body>
+
+
+
+					<section>
+						<img src="wall.png" alt="Could caption go here?">
+						<img src="wall.png" alt="Could caption go here?">
+						<img src="wall.png" alt="Could caption go here?">
+						<img src="wall.png" alt="Could caption go here?">
+					</section>
+
+
+    </body>
+</html>
