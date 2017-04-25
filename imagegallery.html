@@ -17,12 +17,8 @@
 			margin: 50px auto;
 			background: rgba(255,255,0,.4);
 			min-height: 200px;
-			width: 70vw;
+			width: 90vw;
 		}
-
-
-
-
 
 		section  {
 			grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -30,9 +26,10 @@
 			align-content: space-around;
 			justify-content: space-between;
 	 	}
-		img {
-		justify-self: center; align-self: center; text-align: center; width: 220px;
+		figure {
+		justify-self: center; align-self: start; text-align: center;
 	 }
+	 	img { width: 100%; }
 
 
 
@@ -44,11 +41,12 @@
 
 
 					<section>
-						<img src="wall.png" alt="Could caption go here?">
-						<img src="wall.png" alt="Could caption go here?">
-						<img src="wall.png" alt="Could caption go here?">
-						<img src="wall.png" alt="Could caption go here?">
-					</section>
+						<figure class="image"><img src="wall.png" alt="asd"><figcaption>caption goes here and here and what about when this happens?</figcaption></figure>
+						<figure class="image"><img src="wall.png" alt="asd"><figcaption>caption</figcaption></figure>
+						<figure class="image"><img src="wall.png" alt="asd"><figcaption>caption goes here and here and what about when this happens?</figcaption></figure>
+						<figure class="image"><img src="wall.png" alt="asd"><figcaption></figcaption></figure>
+						<figure class="image"><img src="wall.png" alt="asd"><figcaption>caption goes here and here and what about when this happens?</figcaption></figure>
+				</section>
 
 
     </body>
