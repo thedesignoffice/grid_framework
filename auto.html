@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	  <title>The Design Office: Grid Experiments</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="title" content="The Design Office">
+	  <meta name="description" content="Grid framework that we're playign with">
+		<meta name="author" content="Developed by John Caserta">
+	  <meta name="Copyright" content=" The Design Office 2017. ">
+
+    <style>
+		img { width: 100%;  }
+		body { margin: 0; box-sizing: border-box; }
+		section {
+			counter-reset: my--counter;
+			display: grid;
+			padding: 0;
+			background: rgba(255,255,0,.4);
+		}
+		section>div:nth-child(n):before { content: counter(my--counter); }
+		section>div {
+				counter-increment: my--counter;
+				min-height: 50px;
+				background: rgba(0,0,255,.4);
+			}
+
+			section>div>div {
+					background: rgba(255,0,0,.4);
+					margin: 1px;
+				}
+
+			.smallBox { width: 10px; height: 15px; background: grey; }
+			.medBox { width: 40px; height: 35px; background: grey; }
+			.largeBox { width: 110px; height: 95px; background: grey; }
+
+/* First section */
+		section:nth-child(1)  {
+		  grid-template-columns: auto auto;
+		  grid-template-rows: auto auto;
+			grid-gap: 10px;
+		}
+		section:nth-child(1) div:nth-child(1)  {
+		  grid-column: 2; grid-row: 1;
+		}
+
+    </style>
+    </head>
+    <body>
+
+
+
+					<section>
+					  <div>One word</div>
+						<div>Auto seems to make some decisions around what is needed, looking for small little bits and shrinking the grid area to fit. </div>
+						<div><img src="wall.png"></div>
+						<div>Only three words </div>
+					</section>
+
+
+
+    </body>
+</html>
