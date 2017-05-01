@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	  <title>The Design Office: Grid Experiments</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="title" content="The Design Office">
+	  <meta name="description" content="Grid framework that we're playign with">
+		<meta name="author" content="Developed by John Caserta">
+	  <meta name="Copyright" content=" The Design Office 2017. ">
+
+    <style>
+
+		img { width: 100%; height: auto;  }
+		body { margin: 0 50px; box-sizing: border-box; }
+		section {
+			counter-reset: my--counter;
+			display: grid;
+			padding: 0;
+			margin: 50px 0;
+		}
+		section>div:nth-child(n):before { content: counter(my--counter); }
+		section>div {
+				counter-increment: my--counter;
+				min-height: 150px;
+				mix-blend-mode: multiply;
+			}
+
+			section>div>div {
+					min-height: 10px;
+					margin: 1px;
+				}
+
+/* First section */
+		section:nth-child(1)  {
+		  grid-template-columns: 1fr 1fr 1fr 1fr;
+		  grid-template-rows: 1fr 1fr 1fr 1fr;
+			align-content: space-around;
+			justify-content: space-between;
+		}
+		section:nth-child(1) div:nth-child(1)  {
+		  grid-column: 2; grid-row: 1;
+		}
+
+
+			div { content: url('x.png'); width: 100%; height: 100%; mix-blend-mode: mulitply; }
+
+.one { grid-row: 2 / 4; grid-column: 2 / 5; z-index: -1;}
+.two { grid-row: 1 / 5; grid-column: 2 / 3; z-index: -2;}
+
+    </style>
+    </head>
+    <body>
+
+
+
+					<section>
+						<div></div>
+						<div></div>
+						<div>Content for this</div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div class="two"></div>
+						<div class="one"></div>
+					</section>
+
+
+    </body>
+</html>
