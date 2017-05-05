@@ -31,7 +31,7 @@
 /* First section */
 		section:nth-child(1)  {
 		  grid-template-columns: 1fr 1.5fr 1fr 1fr 1.5fr;
-		  grid-template-rows: 1fr 1fr 4fr 1fr 1fr;
+		  grid-template-rows: 1fr 1fr 2fr 1fr 11fr;
 			align-content: space-around;
 			justify-content: space-between;
 		}
@@ -46,12 +46,20 @@
 .five { grid-row: 3 / 4; grid-column: 1 / 5; z-index: -12;}
 .six { grid-row: 2 / 4; grid-column: 1 / 2; z-index: -12;}
 
+@media only screen and (max-width: 800px) {
+	section:nth-child(1)  {
+		grid-template-columns: 1fr 1fr ;
+		grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr;
+		align-content: space-around;
+		justify-content: space-between;
+	}
+}
     </style>
     </head>
     <body>
 
 
-
+<a href="x2.html">
 					<section>
 						<div></div>
 						<div></div>
@@ -68,8 +76,14 @@
 						<div></div>
 						<div class="three"></div>
 						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
 					</section>
-
+</a>
 
     </body>
 </html>
