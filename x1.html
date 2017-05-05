@@ -30,20 +30,21 @@
 
 /* First section */
 		section:nth-child(1)  {
-		  grid-template-columns: 1fr 1fr 1fr 1fr;
-		  grid-template-rows: 1fr 1fr 1fr 1fr;
+		  grid-template-columns: 1fr 1.5fr 1fr 1fr 1.5fr;
+		  grid-template-rows: 1fr 1fr 4fr 1fr 1fr;
 			align-content: space-around;
 			justify-content: space-between;
-		}
-		section:nth-child(1) div:nth-child(1)  {
-		  grid-column: 2; grid-row: 1;
 		}
 
 
 			div { content: url('x.png'); width: 100%; height: 100%; mix-blend-mode: mulitply; }
 
-.one { grid-row: 2 / 4; grid-column: 2 / 5; z-index: -1;}
+.one { grid-row: 2 / 3; grid-column: 2 / 5; z-index: -1;}
 .two { grid-row: 1 / 5; grid-column: 2 / 3; z-index: -2;}
+.three { grid-row: 2 / 3; grid-column: 1 / 5; z-index: -4;}
+.four { grid-row: 2 / 4; grid-column: 3 / 4; z-index: -2;}
+.five { grid-row: 3 / 4; grid-column: 1 / 5; z-index: -12;}
+.six { grid-row: 2 / 4; grid-column: 1 / 2; z-index: -12;}
 
     </style>
     </head>
@@ -54,15 +55,19 @@
 					<section>
 						<div></div>
 						<div></div>
-						<div>Content for this</div>
-						<div></div>
-						<div></div>
+						<div class="four"></div>
 						<div></div>
 						<div></div>
 						<div></div>
 						<div></div>
 						<div class="two"></div>
 						<div class="one"></div>
+						<div></div>
+						<div class="five"></div>
+						<div class="six"></div>
+						<div></div>
+						<div class="three"></div>
+						<div></div>
 					</section>
 
 
