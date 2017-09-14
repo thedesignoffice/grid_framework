@@ -1,2 +1,3 @@
 # grid_framework
-Playing with Grid. Freel free to use
+
+A collection of CSS grid experiments. Feel free to use. Feel free to add.
